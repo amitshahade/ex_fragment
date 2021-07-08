@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl1"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+    <include layout="@layout/partial_frame"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="#E53935"
+        android:textStyle="bold"
+        android:textSize="30dp"
+         />
+    </FrameLayout>
+
+
+
+
+    <FrameLayout
+       android:id="@+id/fl2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FB8C00"
+        >
+       <fragment
+           tools:layout="@layout/fragment_count_up_"
+           android:name="com.example.fragment_examples.CountUp_Fragment"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/fl3"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nameFrag"/>
+        <FrameLayout
+            android:id="@+id/flcontainer"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+</LinearLayout>
