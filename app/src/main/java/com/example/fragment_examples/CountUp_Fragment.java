@@ -16,18 +16,21 @@ public class CountUp_Fragment extends Fragment {
     int count=0;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 
+    {
 
         // Inflate the layout for this fragment
-        View fragmentview = inflater.inflate(R.layout.fragment_count_up_, container, false);
-        TextView tv1 = (TextView)fragmentview.findViewById(R.id.tv1);
-        Button b1 = (Button)fragmentview.findViewById(R.id.b1);
+        View view = inflater.inflate(R.layout.fragment_count_up_, container, false);
+        TextView tv1 = (TextView)view.findViewById(R.id.tv1);
+        Button b1 = (Button)view.findViewById(R.id.b1);
 
-//        Bundle bundle = this.getArguments();
-//        String strtext =bundle.getString("key");
-//        System.out.println(""+strtext);
+
+        String subtext = null;
+        if (getArguments() != null) {
+            subtext = getArguments().getString("data");
+        }
+        System.out.println("ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"+subtext);
 
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +42,6 @@ public class CountUp_Fragment extends Fragment {
             }
         });
 
-        return fragmentview;
+        return view;
     }
 }

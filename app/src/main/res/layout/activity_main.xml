@@ -35,11 +35,12 @@
         android:layout_height="wrap_content"
         android:background="#FB8C00"
         >
-       <fragment
-           tools:layout="@layout/fragment_count_up_"
-           android:name="com.example.fragment_examples.CountUp_Fragment"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
+
+        <fragment
+            android:name="com.example.fragment_examples.CountUp_Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_count_up_" />
     </FrameLayout>
 
 
