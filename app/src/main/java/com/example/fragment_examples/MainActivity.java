@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         Fragment countUp_fragment= new CountUp_Fragment();
         Bundle bundle = new Bundle();
-        bundle.putString("data", "This is Argument Fragment");
+        bundle.putString("key", "This is my data");
 
         countUp_fragment.setArguments(bundle);
 
